@@ -44,7 +44,7 @@ if __name__ == '__main__':
                     'speed': row['v']
                 }
 
-                producer.send(KAFKA_TOPIC, value=dumps(message))
+                producer.send(KAFKA_TOPIC, value=message)
 
             current_interval += MESSAGE_INTERVAL
             sleep(MESSAGE_INTERVAL)
