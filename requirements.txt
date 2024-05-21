@@ -1,0 +1,4 @@
+kafka-python~=2.0.2
+pymongo~=4.7.2
+pyspark~=3.5.1
+uxsim~=1.2.0
