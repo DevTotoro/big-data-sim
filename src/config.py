@@ -16,6 +16,7 @@ MESSAGE_INTERVAL = int(environ.get('MESSAGE_INTERVAL', 5))
 SPARK_VERSION = environ.get('SPARK_VERSION', '3.5.1')
 MONGO_SPARK_CONNECTOR_VERSION = environ.get('MONGO_SPARK_CONNECTOR_VERSION', '3.0.2')
 
-MONGO_URI = environ.get('MONGO_URI', 'mongodb://root:root@localhost:27017/big_data_sim?authSource=admin')
+MONGO_DB_NAME = environ.get('MONGO_DB', 'big_data_sim')
+MONGO_URI = environ.get('MONGO_URI', f'mongodb://root:root@localhost:27017/{MONGO_DB_NAME}?authSource=admin')
 RAW_VEHICLE_DATA_COLLECTION = environ.get('RAW_VEHICLE_DATA_COLLECTION', 'raw_vehicle_data')
 PROCESSED_VEHICLE_DATA_COLLECTION = environ.get('PROCESSED_VEHICLE_DATA_COLLECTION', 'processed_vehicle_data')
